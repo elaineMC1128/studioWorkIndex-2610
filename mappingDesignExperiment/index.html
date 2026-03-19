@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--The page width is as wide as the device-->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>changeMe!!!!</title>
+
+    <script src="https://unpkg.com/konva@10/konva.min.js"></script>
+
+    <!--Introduce style files & JavaScript files-->
+    <link rel="stylesheet" href="../reset.css">
+    <link rel="stylesheet" href="mappingStyle.css">
+    <script src="mappingMain.js" defer></script>
+</head>
+<body>
+
+<main>
+
+    <div class="toolBar">
+        <button id="circle-button">draw a new circle</button>
+        <fieldset>
+            <legend>Pick a new circle colour:</legend>
+
+            <div>
+                <input type="radio" id="change-red" name="colourSelect" value="red" checked />
+                <label for="change-red">Huey</label>
+            </div>
+
+            <div>
+                <input type="radio" id="change-cornflower" name="colourSelect" value="cornflowerblue" />
+                <label for="change-cornflower">Dewey</label>
+            </div>
+
+            <div>
+                <input type="radio" id="change-greenyellow" name="colourSelect" value="greenyellow" />
+                <label for="change-greenyellow">Louie</label>
+            </div>
+        </fieldset>
+    </div>
+
+    <!--Create a container to wrap the drawing stage-->
+    <div class="stageContainer" id="stage-container">
+        <div id="konva-stage"></div>
+    </div>
+</main>
+
+</body>
+</html>
