@@ -7,6 +7,7 @@ const playButton = document.getElementById("play-button");
 // intro dialog setup
 introDialog.showModal();
 
+//When the dialogCloseButton is clicked -> executes closeDialog
 dialogCloseButton.addEventListener("click", closeDialog);
 
 function closeDialog(){

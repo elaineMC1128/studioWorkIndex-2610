@@ -1,10 +1,37 @@
+/* Keep the entire page content in the center of the screen and set the background and alignment */
+/* I want to make the main function of this page more obvious and prominent */
+body{
+    background-color: #1355B2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+}
+
+h1{
+    color: white;
+}
+
 #play-button{
-    width: 5rem;
+    /* I enlarged the play button a bit to make it more obvious */
+    width: 6rem;
+    height: 3rem;
+    font-size: 1rem;
     transition: 2000ms;
+    background-color: white;
 }
+
+/* set pseudo-class: moves the cursor over play-button*/
 #play-button:hover{
-    cursor: no-drop;
+    /* no-drop means cannot click, so I use pointer to replace no-drop */
+    cursor: pointer;
 }
+
 #play-button:active{
     width: 30rem;
+    /* the play-botton changes color when the mouse presses the botton */
+    /* let the play-botton has audiovisual feedback when pressed */
+    background-color: #FFCBEB;
 }
