@@ -34,10 +34,18 @@
         <div class="sliderContainer">
             <div class="iconContainer">
                 <!--Icon on the left: indicates low volume-->
-                <span>🔈</span>
+                <div class="iconBlock">
+                    <span>🔈</span>
+                    <small>Low</small>
+                </div>
+
                 <input type="range" id="var1Range" min="-48" max="0" step="1" value="1">
                 <!--Icon on the right: indicates high volume-->
-                <span>🔊</span>
+                <div class="iconBlock">
+                    <span>🔊</span>
+                    <small>High</small>
+                </div>
+
             </div>
             <!--Name this slide container "Volume"  -->
             <!--associate "Volume" with the slider (clicking on the text will also select the slider)-->
@@ -46,11 +54,21 @@
 
         <div class="sliderContainer">
             <div class="iconContainer">
-                <!--Icon on the left: indicates less reverb-->
-                <span>🎚️</span>
+                <!--Because reverb can't be very vivid with icons, I added a small text below the icon to annotate it.-->
+                <!--For the sake of the consistency of the web page, I set the other two slide-containers to the same effect-->
+                <div class="iconBlock">
+                    <!--I used control panel-style emojis here to embody the reverb. Reverb is a comprehensive sound parameter, so I use a single control panel for less reverb and multiple controllers panel for more reverb-->
+                    <span>🎚️</span>
+                    <small>Dry</small>
+                </div>
+
                 <input type="range" id="var2Range" min="1" max="25" step="1" value="5">
-                <!--Icon on the left: indicates more reverb-->
-                <span>🎛️</span>
+
+                <div class="iconBlock">
+                    <span>🎛️</span>
+                    <small>Space</small>
+                </div>
+
             </div>
             <!--Name this slide container "Reverb"  -->
             <!--associate "Reverb" with the slider-->
@@ -60,11 +78,19 @@
 
         <div class="sliderContainer">
             <div class="iconContainer">
-                <!--Icon on the left: indicates low pitch-->
-                <span>🎵</span>
-                <input type="range" id="var3Range" min="1" max="100" step="1" value="1">
-                <!--Icon on the right: indicates high pitch-->
-                <span>🎶</span>
+                <!--I used simple music note emojis because pitch is often understood musically rather than numerically. The single note on the left suggests a lower or simpler tone.-->
+                <div class="iconBlock">
+                    <span>🎵</span>
+                    <small>Heavy</small>
+                </div>
+
+                    <input type="range" id="var3Range" min="1" max="100" step="1" value="1">
+                <!--The double-note emoji suggests a brighter, lighter, or more animated musical quality on the higher end of the slider.-->
+                <div class="iconBlock">
+                    <span>🎶</span>
+                    <small>Light</small>
+                </div>
+
             </div>
             <!--Name this slide container "Pitch"  -->
             <!--associate "Pitch" with the slider-->
