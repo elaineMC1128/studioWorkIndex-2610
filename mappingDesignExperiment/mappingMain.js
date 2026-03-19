@@ -11,7 +11,7 @@ let stageContainerWidth = stageContainer.offsetWidth;
 let stageContainerHeight = stageContainer.offsetHeight;
 //console.log(stageContainerHeight);
 //set default circle color
-let circleColour = "pink";
+let circleColour = "red";
 
 // create the konva stage
 const stage = new Konva.Stage({
