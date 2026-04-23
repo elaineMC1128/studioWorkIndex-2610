@@ -37,12 +37,22 @@ h1 {
     margin-bottom: 3rem;
 }
 
-h2, summary {
+h2 {
     font-size: 1.5em;
     margin: 0 0 0.8rem 0;
     padding-bottom: 0.3rem;
     border-bottom: 2px solid var(--cor7);
 }
+
+summary {
+    font-size: 1.6em;
+    margin: 0;
+    padding-bottom: 0.3rem;
+}
+
+details[open] summary {
+    border-bottom: 2px solid #8e857f;
+    }
 
 h3 {
     font-size: 1.2em;
