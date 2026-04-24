@@ -33,13 +33,14 @@
     </section>
 
     <section>
-        <h2>In-class experiments</h2>
-
-        <ol>
-            <li><a href="./informationDesignExperiment" target="_blank" class="link">Information design</a></li>
-            <li><a href="./feedbackDesignExperiment" target="_blank" class="link">Feedback</a></li>
-            <li><a href="./mappingDesignExperiment" target="_blank" class="link">Mapping</a> </li>
-        </ol>
+        <details>
+            <summary>In-class experiments</summary>
+            <ol>
+                <li><a href="./informationDesignExperiment" target="_blank" class="link">Information design</a></li>
+                <li><a href="./feedbackDesignExperiment" target="_blank" class="link">Feedback</a></li>
+                <li><a href="./mappingDesignExperiment" target="_blank" class="link">Mapping</a> </li>
+            </ol>
+        </details>
     </section>
 
     <section>
@@ -119,8 +120,9 @@
             <summary>Technical Approach</summary>
             <div class="dropdown-content">
                 <p>
-                    This project is a browser-based prototype built using HTML, CSS, and JavaScript, with Konva.js handling the visual interface and Tone.js handling audio playback. HTML and CSS are used to organize the page structure and apply styles, while JavaScript handles the main system logic, including drag-and-drop behavior, playback status, and sequence updates. I chose Konva.js because the project relies on a custom 2D scene that includes layered graphics, draggable objects, hover feedback, and animation effects. Tone.js is used to trigger notes in real-time within the browser and link visual actions to repeatable audio output. This combination allows the project to function as a small interactive sequencer, rather than just a static visual prototype.<br>
-                    <br>The core feature of this project is a drag-and-drop fish sequencer. Users create music by dragging different marine creatures from a tray into a grid-like digital pool, where each placement becomes part of the musical sequence. Visually, the pool serves as both an engaging scene and an easy-to-read grid-based creative space, with the fish acting as note carriers. Functionally, the system detects which grid cell each fish is dragged into and stores the fish’s species and position as sequence data. During playback, sound waves pulse across the tank column by column; when they reach a position occupied by a fish, Tone.js triggers the corresponding sound effect. On the interaction level, the primary operations include dragging, dropping, and testing the arrangement through playback. This allows the creative process to be realized through spatial decisions rather than traditional button inputs. Technically, this functionality is built using Konva’s draggable shapes and layered canvas structure, combined with JavaScript logic for grid detection, object state management, and timed triggers.
+                    This project is built as a browser-based prototype using HTML, CSS, and JavaScript, with <a href="https://konvajs.org/docs/index.html" target="_blank" class="example">Konva.js</a> for the visual interface and <a href="https://tonejs.github.io/" target="_blank" class="example">Tone.js</a> for sound playback. I chose Konva because the tool depends on a custom 2D scene with draggable fish, layered graphics, and animated playback feedback, while Tone.js allows the visual arrangement to be translated into repeatable musical output. The CSS supports this by creating a soft aquatic atmosphere, so the prototype feels like a playful digital environment rather than a conventional music software interface.<br>
+                    <br>The core feature of the project is a drag-and-place fish sequencer. Users select fish from a palette, create draggable copies by <i>clone</i> function, and place them into a gridded pool. When a fish is dropped, the function <i>isInsideGrid</i> checks whether it is inside the pool, and <i>getSnapPosition</i> function snaps it to the nearest cell, and stores its position in the <i>placedNotes array</i>. This turns visual placement into sequence data. In the current system, row position controls pitch through the <i>rowNotes array</i>, and column position controls playback timing as the scan moves across the grid. Fish type also maps to different synth timbres, so composition happens through spatial arrangement rather than traditional note input.<br>
+                    <br>Other features support the concept through feedback and control. Playback is shown as a moving wave-like scan highlight that reads the grid column by column and triggers notes in the active column. A fan control is used for play and pause, with its rotating blades reinforcing the wave metaphor, while a slider adjusts speed and buttons allow the user to restart or clear the arrangement. Hover previews, cursor changes, and scale feedback also help make the fish feel interactive and easier to understand. Together, these technical systems support the project’s aim of making music-making more playful, accessible, and visually connected to sound. This section is supported by links to the project codebase, system map, and the external documentation for Konva.js and Tone.js on the work index page.
                 </p>
             </div>
         </details>
@@ -139,10 +141,10 @@
 
     <section>
         <details class="subContainer">
-            <summary>Peer User Testing Form</summary>
+            <summary>Peer User Testing</summary>
             <div class="dropdown-content">
                 <p>
-                    <a href="https://forms.cloud.microsoft/r/Yyp75evXPv" target="_blank">Here's the Peer User Testing</a>
+                    <a href="https://forms.cloud.microsoft/r/Yyp75evXPv" target="_blank">Here's the Peer User Testing Form</a>
                 </p>
 
                 <h3>Peer User Testing Reflection</h3>
@@ -160,7 +162,9 @@
         <details class="subContainer">
             <summary>Project Timeline</summary>
             <div class="dropdown-content">
-                <img src="./assets/icons/project%20timeline.png" alt="project timeline"/>
+                <figure>
+                    <img src="./assets/icons/project%20timeline.png" alt="project timeline"/>
+                </figure>
             </div>
         </details>
     </section>

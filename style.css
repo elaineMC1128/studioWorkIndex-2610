@@ -126,3 +126,7 @@ figcaption {
     height: auto;
     border-radius: 6px;
 }
+
+i {
+    color: var(--cor7);
+}
