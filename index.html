@@ -185,6 +185,211 @@
         </details>
     </section>
 
+    <section>
+        <details class="subContainer">
+            <summary>Reflection</summary>
+            <div class="dropdown-content">
+                <h3>Purpose and Final Design</h3>
+                <p>
+                    The initial purpose of this project was to design a browser-based tool in which users could generate evolving sound through spatial interaction, without directly composing or controlling the output. Users would place fish into a pool environment, and sound would emerge from the behaviour of those fish within the system instead of from direct instruction.
+                </p>
+                <p>
+                    The final design, Ripple, preserves this core intention. Users still place aquatic creatures into a pool viewed from above, and sound still emerges from what those creatures do rather than from what the user explicitly commands. The fundamental relationship between the user and the system, in which users set conditions rather than script results, remains unchanged.
+                </p>
+                <p>
+                    What changed was the mechanism through which sound is triggered. The initial design used tile lines as triggers. Fish crossing a line would produce a note. In the final design, sound is triggered by collisions between creatures and between creatures and zone boundaries. This shift came from a deeper consideration of what "emergent" actually means. Tile lines still impose a kind of structure because they divide the space into fixed intervals, and sound happens at predictable moments as fish cross them. Collision, by contrast, cannot be precisely predicted or scheduled. The moment a sound occurs depends entirely on the movement of multiple agents interacting with each other and with their environment.
+                </p>
+                <p>
+                    In this sense, the final design more fully achieves the original purpose than the initial concept did. The tool still asks users to make spatial decisions, such as what creatures to place, where to place them, and which zone to assign them to, but the resulting sound is less determined by those decisions than ever. The user shapes the conditions; the system shapes the sound.
+                </p>
+
+                <h3>Values and Judgement of Worth</h3>
+                <p>
+                    The values of this project were initially centred around three interconnected ideas: accessibility, the creative value of unpredictability, and indirect creative control. The final design embodies all of these values, although in some cases they became more clearly expressed than originally anticipated in the initial concept.
+                </p>
+                <p>
+                    At its core, Ripple is built around accessibility. The tool does not require any musical knowledge to use. There are no note names, rhythm grids, or timing structures to follow. The only actions available to users are dragging creatures into the pool, clicking to intervene, adjusting activity zones, and selecting moods. Each action produces immediate visual and sonic feedback, allowing users to understand the system through exploration rather than instruction.
+                </p>
+                <p>
+                    The value of unpredictability became more fully realised in the final design. After several major design iterations, the final version retained the idea of creatures moving freely, while sound is only generated through collisions, which cannot be precisely predicted. This means that the sonic output is genuinely unpredictable, even for the person setting up the system. At the same time, the final design does not blindly pursue unpredictability or treat randomness simply as something entertaining. Instead, it attempts to balance unpredictability with space for user agency, making unpredictability part of the experience itself, something to observe and reflect on. This also supports the accessibility of the tool, reducing the pressure users may feel to create “good” music and making the experience feel less intimidating to approach.
+                </p>
+                <p>
+                    In the final design, the user’s role in indirect creative control also became clearer. Users do not create sound by pressing keys, clicking notes, or placing notes onto a structured sequencer. Instead, they shape the conditions in which sound can happen (such as choosing timbre or adjusting the size of the performance space) and influence the characteristics and movement of sound-producing elements (such as selecting different creatures or clicking to interrupt their movement direction). This establishes a different relationship between the user and the tool. Rather than being a performer who controls every outcome, the user becomes a participant and influencer within the system.
+                </p>
+
+                <h3>Interaction Design Principle: Mapping</h3>
+                <p>
+                    The core interaction design principle explored in this project is mapping. In conventional music tools, mapping is typically applied in a direct and deterministic way: a key maps to a fixed note, a position on a grid maps to a specific beat, a slider maps to a precise value. The relationship between input and output is one-to-one, immediate, and fully controlled by the user. The novelty in Ripple lies in deliberately breaking this relationship while keeping the mapping itself legible.
+                </p>
+                <p>
+                    In Ripple, spatial position still maps to pitch. Creatures placed in the inner zone produce high tones, creatures in the outer zone produce low tones. This part of the mapping is straightforward and intuitive. However, this mapping is never activated directly by the user. Sound only occurs on collision, and collision is a physical event that emerges from the behaviour of multiple autonomous agents interacting within a confined space. The user decides where to place a creature, but cannot decide when or whether it will collide, how hard that collision will be, or what else it will collide with. The mapping is real and consistent, but its activation is outside the user's direct control.
+                </p>
+                <p>
+                    This creates what could be described as an indirect mapping chain: the user maps a creature to a zone, the zone maps to a pitch range, and the collision maps to a moment in time. Each step in this chain is logical and learnable, but the chain as a whole produces outcomes that cannot be fully predicted. The user understands the rules without being able to script the result.
+                </p>
+                <p>
+                    This is where the novel application lies. Most tools use mapping to give users precise authorship. Users decide what sound happens, and the mapping executes that decision. *Ripple* uses mapping to give users meaningful influence over a system that retains its own agency. The spatial logic is clear enough that users can make intentional decisions, such as placing a slow moving sea slug in the outer zone because they want occasional deep tones, or placing a rock in the inner zone to create more frequent high pitch collisions. However, the sound that actually emerges is always partly authored by the system itself.
+                </p>
+                <p>
+                    The result is a form of mapping that is legible without being deterministic. Users are not guessing randomly because their spatial decisions have real and consistent sonic consequences. At the same time, they are not composing directly because the system mediates between intention and outcome in a way that preserves genuine unpredictability. This balance between legibility and indeterminacy is what makes the application of mapping novel in this project.
+                </p>
+
+                <h3>Design Judgement</h3>
+                <h4>
+                    Judgment 1: From Grid pool (fish randomly swim) to Pool Sequencer (static fish as notes)
+                </h4>
+                <div class="flex-container">
+                    <figure>
+                        <img src="assets/img/version1.png" alt="prototype_version1" width="40%">
+                        <figcaption>Grid pool</figcaption>
+                    </figure>
+
+                    <figure>
+                        <img src="assets/img/version2.png" alt="prototype_version2" width="40%">
+                        <figcaption>Pool Sequencer</figcaption>
+                    </figure>
+                </div>
+                <p>
+                    My earliest concept explored a pool where fish moved randomly and triggered sounds as they crossed structured lines. I was very drawn to the idea of autonomous fish movement because it felt playful, alive, and less dependent on direct user control. I liked the idea that sound could emerge naturally from movement and space rather than be deliberately composed.
+                </p>
+                <p>
+                    However, after experimenting with this idea, I realised there was a tension between three competing systems: the randomness of fish movement, the structured grid triggering sound, and the unpredictable collisions between fish. These elements constantly disrupted each other, creating a level of chaos that made the project difficult to understand as a music-making tool. The sounds felt inconsistent, and users had very little opportunity to intentionally shape outcomes.
+                </p>
+                <p>
+                    This exploration helped me realise that too much unpredictability reduced user agency. Although I liked the idea of randomness, users still needed a sense of participation and decision-making. As a result, I shifted towards a grid sequencer prototype, where fish became static placements within a structured system. This allowed mapping to become clearer, gave users more control over sound decisions, and reduced the feeling of losing control over the experience.
+                </p>
+
+                <h4>
+                    Judgment 2: From Grid Sequencer to Circular Pool
+                </h4>
+                <div class="flex-container">
+                    <figure>
+                        <img src="assets/img/version2.png" alt="prototype_version2" width="40%">
+                        <figcaption>Pool Sequencer</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/project_img.png" alt="Circular Pool" width="40%">
+                        <figcaption>Circular Pool</figcaption>
+                    </figure>
+                </div>
+                <p>
+                    Although the grid sequencer solved some problems, peer testing and tutor feedback gradually made me realise that the project was becoming increasingly similar to a traditional music sequencer. The fish and pool metaphor made it visually playful, but underneath, the interaction was still highly structured and predictable.
+                </p>
+                <p>
+                    Through this process, I realised that my attempt to maximise control had unintentionally moved the project away from its original intention. I wanted to create an expressive and accessible creative tool, but the project was starting to feel closer to conventional music software.
+                </p>
+                <p>
+                    The design judgment here was whether to refine the tile line system — adjusting spacing, randomising line positions, or varying fish speeds, or to reconsider the trigger mechanism entirely.
+                </p>
+                <p>
+                    The decision was to move away from tile lines altogether and replace them with collision as the sole sound trigger. This judgment was informed since I encountered Clinamen(an installation by Céleste Boursier-Mougenot) after researching creative tools and interactive artworks. In this artwork, sound is produced entirely by the physical encounter between objects, with no underlying grid or structure. This reference helped me realise that unpredictability did not necessarily need to be removed. Instead, it could become part of the expressive experience.
+                </p>
+
+                <h4>
+                    Judgement 3: Complex Controls to Depth Design Decision
+                </h4>
+                <div class="flex-container">
+                    <figure>
+                        <img src="assets/img/function%20test.png" alt="omplex Controls" width="40%">
+                        <figcaption>Complex Controls Test</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="assets/img/function2.png" alt="Final Functions" width="40%">
+                        <figcaption>Final Functions</figcaption>
+                    </figure>
+                </div>
+                <p>
+                    An earlier version of Ripple included directional water current controls for each of the three concentric zones. Users could set the speed and direction of the current in each zone, which would influence the movement of creatures within it. The intention is to give users more control options and make the pool area the primary factor in their decision-making. However, after trying this direction, this mechanism created more confusion than control. Instead of making the tool more expressive, the extra rules made the interaction feel less clear. I have a deep understanding of the meaning of the phrase "depth rather than width".
+                </p>
+                <p>
+                    Because of this, I decided to simplify the ring system. In the final design, the rings mainly function as sound or pitch regions, rather than complex movement controllers. Instead, I updated the number and characteristics of creature species, changing from only differentiating them by speed to giving each organism its own realistic movement patterns. This is a more natural adjustment to movement and a more intuitive choice.
+                </p>
+
+                <h4>
+                    Judgment 4: (Tool goal) make music → explore sound generation
+                </h4>
+                <p>
+                    Another important design judgement was redefining the goal of the tool itself.
+                </p>
+                <p>
+                    At the beginning, I imagined the project as a tool for people without music knowledge to make music. However, because the system relied on movement, randomness, and collision, the resulting sounds were often unpredictable and not conventionally melodic. Initially, I saw this as a problem because I felt the outcome should sound more “musical.”
+                </p>
+                <p>
+                    Over time, I realised that the chaotic and imperfect qualities of the system were actually meaningful. Instead of forcing the project to create structured music, I reframed it as a tool for exploring sound generation. This shift helped me accept unpredictability as part of the experience rather than something that needed to be removed.
+                </p>
+                <p>
+                    This judgment changed how I evaluated success in the project. I no longer focus on whether users can create beautiful melodies, but rather on whether users can explore the generation of sound and experience unexpected moments without pressure through this indirect interactive mechanism.
+                </p>
+
+                <h3>Production Timeline</h3>
+                <figure>
+                    <img src="./assets/img/project-timeline.png" alt="project timeline"/>
+                </figure>
+                <p>
+                    My final production timeline changed several times during the semester. At first, I planned to develop the original pool idea where fish moved across lines and triggered notes. This stage focused on defining the purpose, worth, and interaction principle of the project.
+                </p>
+                <p>
+                    In the middle stage, I developed the project into a grid-based pool sequencer — a gridded pool with fish as note carriers and tile lines as triggers. After peer user testing and the tutor’s feedback, two significant issues were identified: the tool was not sufficiently novel in its interaction model, and the sound design needed more depth and variation. These findings prompted a fundamental redesign rather than an incremental refinement. I shifted the project towards the circular pool system. I explored collision-based sound, ring mapping, autonomous creature movement, and a simpler control structure. This stage was more challenging because I had to rethink both the concept and the technical system, but it also made the final project feel more original and connected to my design values.
+                </p>
+                <p>
+                    In retrospect, the most significant navigational decision was the choice to fully commit to the redesign rather than patch the original prototype. This decision created short-term pressure but resulted in a final design that is more conceptually coherent and more honest to the project's stated values. The pivot was disruptive to the original timeline, but it was the right judgment to make.
+                </p>
+
+                <h3>The Aspect I Am Most Proud Of</h3>
+                <p>
+                    The aspect of this project I am most proud of is the conceptual shift from generating music to generating sound.
+                </p>
+                <p>
+                    This was not a decision I arrived at immediately. The project began with the intention of helping non musicians make music, which still implicitly assumed that the goal was a musical output, something structured, something that could be judged as good or not good. It was only through the process of building, testing, and reconsidering that I came to understand why that framing was limiting. The tile line system, the sequencer logic, and the fish as note carriers concept were all attempts to make something that sounded like music. All of them carried an implicit standard of correctness that contradicted the project's stated value of accessibility and freedom from judgment.
+                </p>
+                <p>
+                    The shift happened when I stopped trying to make the tool produce better music and started asking what it would mean to fully embrace the chaos. The reference to <i>Clinamen</i> was important here, not as a visual inspiration, but as a philosophical permission. <i>Clinamen</i> is not trying to sound good. It is simply the result of objects moving through space and encountering each other. The beauty, when it occurs, is accidental. That accidental quality is not a flaw in the system. It is the system.
+                </p>
+                <p>
+                    Once I accepted this, every subsequent design decision became clearer. The project keeps a balance between control and chance. The user can make decisions, but the system still has autonomy. This was difficult to achieve because too much randomness can make the user feel disconnected, while too much control can make the project feel like a normal music interface. The final design sits somewhere between these two sides, which I think makes it more expressive.
+                </p>
+
+                <h3>The Aspect I Found Most Challenging</h3>
+                <p>
+                    The most challenging aspect of this project was navigating the tension between user control and system autonomy.
+                </p>
+                <p>
+                    This tension appeared at almost every stage of the design process. The project was built around the idea that users should not have direct control over sound. The sound should emerge from the behaviour of a system rather than from explicit user instruction. But designing a system that feels genuinely expressive to the person using it, rather than simply random, required a level of calibration that was much harder to achieve than expected.
+                </p>
+                <p>
+                    The flow control system was the clearest example of this challenge. The intention was to give users a meaningful way to shape the dynamics of the pool without giving them direct control over sound. In practice, the controls introduced more confusion than clarity — users could not easily read the relationship between adjusting a current and the sonic result. Removing the flow controls resolved the confusion, but it also raised the question of whether users still had enough agency to feel like they were creating something rather than just watching something happen.
+                </p>
+                <p>
+                    This question‘how much control is enough’ did not have an obvious answer, and I revised it multiple times. Too much control pushed the tool back toward a conventional sequencer. Too little control made the experience feel passive and disconnected.
+                </p>
+                <p>
+                    The solution I arrived at — zone placement as a permanent compositional decision, click-to-intervene as a real-time but temporary disruption, and Mood as a global tonal character setting — was an attempt to distribute control across different timescales and layers. Placement is a slow, deliberate decision. Clicking is an impulsive, immediate one. Mood is a framing decision made before interaction begins. Together they give users multiple registers of agency without any single one of them determining the outcome.
+                </p>
+                <p>
+                    I am not certain this balance is perfectly calibrated. Some users may still feel that the tool does not respond to them clearly enough, or that the connection between their decisions and the sound is too loose. But working through this challenge clarified something important about the project's design values: that the goal was never to give users control over sound, but to give them a meaningful relationship with a system that produces it. The difference between those two things is subtle, but it is the conceptual core of Ripple.
+                </p>
+
+                <h3>Peer Creative Tool Contrast</h3>
+                <p>
+                    A peer's project that provided insightful contrast to my own design judgements was Jannalyn's Klotz Beats. The tool is a grid-based sequencer where users drag colourful geometric shapes onto a grid to create musical loops. Vertical position maps to pitch, horizontal position maps to timing, and each shape's colour and form corresponds to a distinct sound. The visual design is inspired by children's building blocks, and this metaphor operates on two levels simultaneously: the grid is both a sequencer and a canvas for arranging shapes into a visual composition, and the shapes are both musical notes and building blocks that can be assembled into something that looks like a toy construction.
+                </p>
+                <p>
+                    The contrast I found most instructive was in how we each resolved the same underlying question‘ how do you make sound creation accessible to people without musical knowledge’but arrived at opposite answers.
+                </p>
+                <p>
+                    Klotz Beats resolves this through clarity and directness. Each action has a fixed, predictable result. The user places a shape in a cell, and that shape plays its sound at that moment in the sequence, every time. But Klotz Beats achieved something I had not considered — a tool where the visual and sonic outputs are equally valid and independent of each other. A user could engage with it purely as a sound tool, or purely as a visual arrangement activity, or both at once. The creative experience is doubled without the interface becoming more complex.
+                </p>
+                <p>
+                    Ripple, by contrast, resolves the same question through the removal of judgment rather than the removal of complexity. Users do not need to understand music theory, but they also cannot fully predict what sound will result from their actions, because sound only occurs on collision, and collision cannot be scheduled. The tool is accessible not because it is easy to read, but because there is no correct way to use it. Chaos is not a failure state but the expected and accepted output.
+                </p>
+                <p>
+                    Seeing Klotz Beats made me recognise this as a deliberate but unexamined constraint in my own design, and helped me understand more clearly what kind of creative experience Ripple is actually offering, and what it is not.
+                </p>
+
+            </div>
+        </details>
+    </section>
+
 </main>
 
 </body>
